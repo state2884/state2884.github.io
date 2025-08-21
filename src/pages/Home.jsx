@@ -4,7 +4,7 @@ export default function Home(){
   return (
     <section className="home">
       <div className="hero">
-        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1440,fit=crop/YBgeXw1enVSn3Nwm/website-banner2-YanJ3jZOP9hXnXRZ.jpg" alt="banner" />
+        <img src="/assets/wos.webp" alt="banner" />
         <div className="hero-content">
           <h1>Welcome to State 2884</h1>
           <p>Cooperation and camaraderie are at the heart of our community. Join us in Whiteout Survival to team up, share resources, and enjoy events together.</p>
