@@ -35,10 +35,10 @@ export default function Nav() {
   return (
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
-        <div className="brand">
+        <NavLink to="/" className="brand">
           <span className="brand-icon">🏔️</span>
           <span className="brand-text">State 2884</span>
-        </div>
+        </NavLink>
 
         <button
           className={`nav-toggle ${open ? 'open' : ''}`}
@@ -70,15 +70,15 @@ export default function Nav() {
             <span className="nav-icon">🤝</span>
             <span>Alliances</span>
           </NavLink>
-          
           <NavLink 
             to="/stateinfo" 
             onClick={handleLinkClick} 
             className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
           >
-            <span className="nav-icon"> 🌐</span>
+             <span className="nav-icon">🌍</span>
             <span>State Info</span>
           </NavLink>
+          
 
           <a 
             href="#" 

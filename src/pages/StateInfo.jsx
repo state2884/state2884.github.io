@@ -1,23 +1,7 @@
 import React, { useEffect } from 'react'
 
 export default function StateInfo() {
-  useEffect(() => {
-    // Load the ticker counter script
-    const script = document.createElement('script')
-    script.src = '//www.tickcounter.com/static/js/loader.js'
-    script.id = 'tickcounter-sdk'
-    script.async = true
-    document.body.appendChild(script)
-
-    return () => {
-      // Cleanup script on unmount
-      const existingScript = document.getElementById('tickcounter-sdk')
-      if (existingScript) {
-        document.body.removeChild(existingScript)
-      }
-    }
-  }, [])
-
+  
   return (
     <div className="container">
       <section className="state-info">
@@ -94,13 +78,16 @@ export default function StateInfo() {
               <p>Live server statistics</p>
             </div>
             <div className="timer-container">
-              <div 
-                className="tickcounter-embed"
-                dangerouslySetInnerHTML={{
-                  __html: `<a data-type="countup" data-id="457178" class="tickcounter" style="display:block; left:0; width:100%; height:0; position:relative; padding-bottom:25%; margin:0 auto; background: linear-gradient(135deg, #3b82f6, #8b5cf6); border-radius: 12px;" title="Server Age" href="//www.tickcounter.com/countup/457178/">Server Age</a>`
-                }}
-              />
-            </div>
+  <div className="tickcounter-frame" style={{position:'relative', paddingBottom:'25%', height:0, overflow:'hidden', borderRadius:12}}>
+    <iframe
+      title="Server Age"
+      src="//www.tickcounter.com/widget/countup/457178?label=Server%20Age"
+      style={{position:'absolute', top:0, left:0, width:'100%', height:'100%', border:0}}
+      scrolling="no"
+      loading="lazy"
+    />
+  </div>
+</div>
           </div>
 
           {/* Additional Rules Card */}

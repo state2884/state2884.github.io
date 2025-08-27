@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav'
 import Home from './pages/Home'
 import Alliances from './pages/Alliances'
-import Calendar from './pages/StateInfo'
 import StateInfo from './pages/StateInfo'
 
 export default function App(){
