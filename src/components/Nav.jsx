@@ -76,7 +76,7 @@ export default function Nav() {
             onClick={handleLinkClick} 
             className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
           >
-            <span className="nav-icon"></span>
+            <span className="nav-icon"> 🌐</span>
             <span>State Info</span>
           </NavLink>
 
